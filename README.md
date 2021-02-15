@@ -22,7 +22,7 @@ type KeyGoverner interface {
 	GenerateContentKeyID(contentID []byte) []byte
 	GenerateContentKey(contentID []byte) []byte
 	GenerateContentIV(contentID []byte) []byte
-	GenerateContentKeySpec(contentID []byte, policyConfig map[string]string) (map[string]string, error)
+	GenerateContentKeySpec(contentID []byte, policyConfig map[string]string) (*[]ContentKeySpec, error)
 }
 ```
 ### New
